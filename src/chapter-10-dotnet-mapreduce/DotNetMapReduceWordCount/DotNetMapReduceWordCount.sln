@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetMapReduceWordCount.Mapper", "DotNetMapReduceWordCount.Mapper\DotNetMapReduceWordCount.Mapper.csproj", "{451F6B81-2254-4591-B184-C5049FAB7AFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetMapReduceWordCount.Mapper", "DotNetMapReduceWordCount.Mapper\DotNetMapReduceWordCount.Mapper.csproj", "{451F6B81-2254-4591-B184-C5049FAB7AFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetMapReduceWordCount.Reducer", "DotNetMapReduceWordCount.Reducer\DotNetMapReduceWordCount.Reducer.csproj", "{3AD50019-DAD3-4CA2-A914-89F303D28CD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{451F6B81-2254-4591-B184-C5049FAB7AFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{451F6B81-2254-4591-B184-C5049FAB7AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{451F6B81-2254-4591-B184-C5049FAB7AFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AD50019-DAD3-4CA2-A914-89F303D28CD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AD50019-DAD3-4CA2-A914-89F303D28CD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AD50019-DAD3-4CA2-A914-89F303D28CD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AD50019-DAD3-4CA2-A914-89F303D28CD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
