@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetMapReduceWordCount.Mapper", "DotNetMapReduceWordCount.Mapper\DotNetMapReduceWordCount.Mapper.csproj", "{451F6B81-2254-4591-B184-C5049FAB7AFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{451F6B81-2254-4591-B184-C5049FAB7AFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{451F6B81-2254-4591-B184-C5049FAB7AFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{451F6B81-2254-4591-B184-C5049FAB7AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{451F6B81-2254-4591-B184-C5049FAB7AFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCD93989-C492-4317-8504-F252996D9CBE}
+	EndGlobalSection
+	GlobalSection(CodealikeProperties) = postSolution
+		SolutionGuid = 0accca98-5279-405e-904e-b1b90e0cb94c
+	EndGlobalSection
+EndGlobal
