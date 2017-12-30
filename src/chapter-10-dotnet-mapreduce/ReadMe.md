@@ -15,6 +15,34 @@
 - 把net core 2.0的程式和測試資料放到hadoop
 - 執行MapReduce
 
+完整指令是：
+```powershell
+dotnet publish -o ${pwd}\dotnetmapreduce .\DotNetMapReduceWordCount\DotNetMapReduceWordCount.sln
+
+docker-compose up -d
+
+docker cp dotnetmapreduce hadoop-dotnet-master:/dotnetmapreduce
+
+docker exec -it hadoop-dotnet-master bash
+
+hadoop fs -mkdir -p /input
+hadoop fs -copyFromLocal /dotnetmapreduce/jane_austen.txt /input
+hadoop fs -ls /input
+
+
+hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-2.7.2.jar \
+	-files "/dotnetmapreduce" \
+	-mapper "dotnet dotnetmapreduce/DotNetMapReduceWordCount.Mapper.dll" \
+	-reducer  "dotnet dotnetmapreduce/DotNetMapReduceWordCount.Reducer.dll" \
+	-input /input/* -output /output
+
+hadoop fs -ls /output
+hadoop fs -cat /output/part-00000
+
+docker-compose down
+```
+
+### 下面拆解說明
 
 1. 先透過clone的方式把整個repo clone下來：
 ```powershell
@@ -36,7 +64,7 @@ dotnet publish -o ${pwd}\dotnetmapreduce .\DotNetMapReduceWordCount\DotNetMapRed
 docker-compose up -d
 ```
 
-5. 把檔案copy到hadoop的master裡面，並且把測試檔案放到HDFS裡面
+5. 把檔案copy到hadoop的master裡面，並且把測試檔案放到HDFS裡面並且確認有進去
 ```powershell
 docker cp dotnetmapreduce hadoop-dotnet-master:/dotnetmapreduce
 
@@ -44,6 +72,8 @@ docker exec -it hadoop-dotnet-master bash
 
 hadoop fs -mkdir -p /input
 hadoop fs -copyFromLocal /dotnetmapreduce/jane_austen.txt /input
+
+hadoop fs -ls /input
 ```
 
 6. 執行MapReduce (這個實在hadoop master執行)
@@ -53,4 +83,15 @@ hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-2.7.2.jar \
     -mapper "dotnet dotnetmapreduce/DotNetMapReduceWordCount.Mapper.dll" \
     -reducer  "dotnet dotnetmapreduce/DotNetMapReduceWordCount.Reducer.dll" \
     -input /input/* -output /output
+```
+
+7. 檢查執行結果
+```powershell
+hadoop fs -ls /output
+hadoop fs -cat /output/part-00000
+```
+
+8. 當不需要的時候，用下面把整個docker container殺掉
+```powershell
+docker-compose down
 ```
