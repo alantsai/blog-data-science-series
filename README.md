@@ -10,3 +10,9 @@
 範例程式碼用Docker執行Hadoop，然後透過Hadoop Streaming對net core 2.0的程式用來做MapReduce。
 
 [更多資訊](src/chapter-10-dotnet-mapreduce/)
+
+## [16]用R來看股票，透過quantmod了解R的強大
+
+R語言的Hello World介紹 - 用quantmod來分析股票快速了解R在分析、資料處理和繪圖的能力
+
+[更多資訊](src/chapter-16-r-quantmod-intro/)
