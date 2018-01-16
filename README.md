@@ -16,3 +16,11 @@
 R語言的Hello World介紹 - 用quantmod來分析股票快速了解R在分析、資料處理和繪圖的能力
 
 [更多資訊](src/chapter-16-r-quantmod-intro/)
+
+## [17]R語言基礎 上篇 - 語言特性和資料形態
+
+介紹R語言的基礎，主要在兩個部分：
+- R的Language Paradigm
+- R的Data Type
+
+[更多資訊](src/chapter-17-r-language-paradigm-data-type/)
