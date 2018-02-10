@@ -24,3 +24,11 @@ R語言的Hello World介紹 - 用quantmod來分析股票快速了解R在分析�
 - R的Data Type
 
 [更多資訊](src/chapter-17-r-language-paradigm-data-type/)
+
+## [18]R語言基礎 中篇 - 1維度資料結構介紹
+
+介紹R語言裡面的1維度資料結構
+- vector
+- list
+
+[更多資訊](src/chapter-18-r-1-dimension-data-structure/)
